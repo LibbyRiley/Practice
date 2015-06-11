@@ -1,10 +1,76 @@
+<!DOCTYPE html>
 <html>
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
 	<body>
-		<ul>
-			<li>1</li>
-			<li>2</li>
-			<li>3</li>
-			<li>4</li>
-		</ul>
+		<div id="container"> 
+			<h1>Rock, Paper, Scissors.</h1>
+			<form>
+				<input name="usersChoiceInput" type="text">
+				<input type="submit" value="Lets Play!">
+			</form>
+			<h3>You Chose: <span id="youChose"></span></h3>
+			<h3>Computer Chose: <span id="compChose"></span></h3>
+			<h2 id="result"></h2>
+		</div>
 	</body>
+
+	<!-- Javascript for game -->
+
+	<script type="text/javascript">
+		//var userChoice = prompt("Do you choose rock, paper or scissors?");
+		var computerChoice = Math.random();
+		if (computerChoice < 0.34) {
+		computerChoice = "rock";
+		} else if(computerChoice <= 0.67) {
+		computerChoice = "paper";
+		} else {
+		computerChoice = "scissors";
+		} console.log("Computer: " + computerChoice);
+
+		var compare = function(choice1, choice2) {
+		if (choice1 === choice2) { // if both choose same
+		    //userChoice = prompt("The result is a tie! Choose again :)");
+		    var computerChoice = Math.random();
+		    if (computerChoice < 0.34) {
+		    	computerChoice = "rock";
+		    } else if(computerChoice <= 0.67) {
+		    	computerChoice = "paper";
+		    } else {
+		    	computerChoice = "scissors";
+		    } console.log("Computer: " + computerChoice);
+		    console.log(compare(userChoice, computerChoice));
+		} else if (choice1 === "rock") { // if user = rock
+		    if (choice2 === "scissors") { // if comp = sciss
+		        return "You win! Rock beats Scissors";
+		    } else { // if comp = paper
+		        return "Computer wins! Paper beats Rock";
+		    }
+		} else if (choice1 === "paper") { // if user = paper
+		    if (choice2 === "rock") { // if comp = rock
+		        return " You win! Paper beats Rock";
+		    } else { // if comp = scissors
+		        return "Computer wins! Scissors beat Paper.";
+		    }
+		} else if (choice1 === "scissors") { // if user = sciss
+		    if (choice2 === "rock") { // if comp = rock
+		        return "Computer wins! Rock beats Scissors.";
+		    } else { // if comp = paper
+		        return "You win! Scissors beat Paper.";
+		    }
+		} else { // if user enters invalid entry
+		    return "Invalid Choice. You must choose rock, paper, or scissors! Try Again";
+		}
+		}
+
+		var winner = (compare(userChoice, computerChoice));
+
+		document.getElementById("youChose").innerHTML = userChoice;
+		document.getElementById("compChose").innerHTML = computerChoice;
+		document.getElementById("result").innerHTML = winner;
+		
+	</script>
 </html>

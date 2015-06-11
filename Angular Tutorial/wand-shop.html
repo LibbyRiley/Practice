@@ -6,12 +6,19 @@
     <script type="text/javascript" src="app.js"></script>
   </head>
   <body class="container" ng-controller="StoreController as store">
-  	<h2>Olivandar's Wand Store</h2>
-    <div ng-repeat="product in store.products" class="product row">
+  	<div class="page-header">
+	  	<h2>Ollivander's</h2>
+	  	<h4><em>Makers of Fine Wands since 382 B.C.</em></h4>
+    </div>
+    <div style="border-bottom: 1px solid #eee; margin-bottom: 15px;"ng-repeat="product in store.products | orderBy: 'price'" class="product row">
+       <img class="img-thumbnail" ng-src="{{product.images[0].thumb}}"/>
       <h3>
-        {{product.name}}
-        <em class="pull-right">${{product.price}}</em>
+      	{{product.name}} Wand
+        <em class="pull-right">{{product.price | currency}}</em>
       </h3>
+
+      <p><strong>Core:</strong> {{product.core}}</p>
+      <p><strong>Length (inches):</strong> {{product.inches}}</p>
     </div>
   </body>
 </html>

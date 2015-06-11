@@ -1,24 +1,61 @@
 <!DOCTYPE html>
 <html ng-app="wandStore">
   <head>
+  	<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </head>
-  <body class="container" ng-controller="StoreController as store">
+  <body>
+   <div class=" main container" ng-controller="StoreController as store">
   	<div class="page-header">
-	  	<h2>Ollivander's</h2>
-	  	<h4><em>Makers of Fine Wands since 382 B.C.</em></h4>
+  		<img class="logo"src="ollivanders_1.jpg"/>
+	  	<h1>Ollivander's</h1>
+	  	<h2><em>~ Makers of Fine Wands since 382 B.C. ~</em></h2>
     </div>
     <div style="border-bottom: 1px solid #eee; margin-bottom: 15px;"ng-repeat="product in store.products | orderBy: 'price'" class="product row">
-       <img class="img-thumbnail" ng-src="{{product.images[0].thumb}}"/>
+      <img class="image img-thumbnail" ng-src="{{product.images[0].thumb}}"/>
       <h3>
-      	{{product.name}} Wand
-        <em class="pull-right">{{product.price | currency}}</em>
+      	{{product.wood}} Wand | {{product.core}}
       </h3>
-
-      <p><strong>Core:</strong> {{product.core}}</p>
-      <p><strong>Length (inches):</strong> {{product.inches}}</p>
+      <div class="price-container">
+      	<p class="price">{{product.price | currency}}</p>
+      	<button>Add to Cart</button>
+      </div>
+      <div class="clear-fix"></div>
+	  <section class="tab" ng-controller="TabController as tab">
+        <ul class="nav nav-pills">
+          <li ng-class="{ active: tab.isSet(1)}">
+            <a ng-click="tab.setTab(1)" href>Wand Wood</a></li>
+          <li ng-class="{ active: tab.isSet(2)}">
+            <a ng-click="tab.setTab(2)" href>Core</a></li>
+          <li ng-class="{ active: tab.isSet(3)}">
+            <a ng-click="tab.setTab(3)" href>Length &amp; Pliability</a></li>
+        </ul>
+        <div ng-show="tab.isSet(1)">
+          <h4>Wand Wood</h4>
+          <blockquote>
+          	<p><strong>{{product.wood}}</strong></p>
+          	<p>{{product.woodInfo}}</p>
+          </blockquote>
+        </div>
+        <div ng-show="tab.isSet(2)">
+          <h4>Core</h4>
+          <blockquote>
+          	<p><strong>{{product.core}}</strong></p>
+          	<p>{{product.coreInfo}}</p>
+          </blockquote>
+        </div>
+        <div ng-show="tab.isSet(3)">
+          <h4>Length &amp; Pliability</h4>
+          <blockquote>
+          	<p><strong>{{product.length}} inches </strong></p>
+          	<p><strong>{{product.pliability}}</strong></p>
+          </blockquote>
+        </div>
+      </section>
+      
     </div>
+	</div>
   </body>
 </html>

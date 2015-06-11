@@ -25,12 +25,18 @@
       <div class="clear-fix"></div>
 	  <section class="tab" ng-controller="TabController as tab">
         <ul class="nav nav-pills">
-          <li ng-class="{ active: tab.isSet(1)}">
-            <a ng-click="tab.setTab(1)" href>Wand Wood</a></li>
-          <li ng-class="{ active: tab.isSet(2)}">
-            <a ng-click="tab.setTab(2)" href>Core</a></li>
-          <li ng-class="{ active: tab.isSet(3)}">
-            <a ng-click="tab.setTab(3)" href>Length &amp; Pliability</a></li>
+			<li ng-class="{ active: tab.isSet(1)}">
+				<a ng-click="tab.setTab(1)" href>Wand Wood</a>
+			</li>
+			<li ng-class="{ active: tab.isSet(2)}">
+				<a ng-click="tab.setTab(2)" href>Core</a>
+			</li>
+			<li ng-class="{ active: tab.isSet(3)}">
+				<a ng-click="tab.setTab(3)" href>Length &amp; Flexability</a>
+			</li>
+			<li ng-class="{ active: tab.isSet(4)}">
+				<a ng-click="tab.setTab(4)" href>Reviews</a>
+			</li>
         </ul>
         <div ng-show="tab.isSet(1)">
           <h4>Wand Wood</h4>
@@ -47,12 +53,25 @@
           </blockquote>
         </div>
         <div ng-show="tab.isSet(3)">
-          <h4>Length &amp; Pliability</h4>
+          <h4>Length &amp; Flexability</h4>
           <blockquote>
           	<p><strong>{{product.length}} inches </strong></p>
-          	<p><strong>{{product.pliability}}</strong></p>
+          	<p><strong>{{product.flexability}}</strong></p>
           </blockquote>
         </div>
+        <div ng-show="tab.isSet(4)">
+            <!--  Product Reviews List -->
+            <ul class="reviews">
+              <h4>Reviews</h4>
+              <li ng-repeat="review in product.reviews">
+                <blockquote>
+                  <strong>{{review.stars}} Stars</strong>
+                  {{review.body}}
+                  <cite class="clearfix">- {{review.author}}</cite>
+                </blockquote>
+              </li>
+            </ul>
+          </div>
       </section>
       
     </div>

@@ -57,6 +57,13 @@ p {
 	font-size: 14px !important;
 }
 
+.ng-invalid.ng-dirty {
+	border-color: red;
+}  
+
+.ng-valid.ng-dirty {
+	border-color: green;
+}  
 
 
 

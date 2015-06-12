@@ -1,32 +1,45 @@
 (function() {
-  var app = angular.module('wandStore', []);
+    var app = angular.module('wandStore', []);
 
-  app.controller('StoreController', function(){
-    this.products = wands;
-  });
+    app.controller('StoreController', function(){
+        this.products = wands;
+    });
 
-  app.controller('TabController', function(){
-    this.tab = 1;
+    app.controller('TabController', function(){
+        this.tab = 1;
 
-    this.setTab = function(newValue){
-      this.tab = newValue;
-    };
+        this.setTab = function(newValue){
+          this.tab = newValue;
+        };
 
-    this.isSet = function(tabName){
-      return this.tab === tabName;
-    };
-  });
+        this.isSet = function(tabName){
+          return this.tab === tabName;
+        };
+    });
 
+    app.controller('ReviewController', function(){
+    	this.review = {};
 
-	app.controller('ReviewController', function(){
-		this.review = {};
-
-		this.addReview = function(product){
+    	this.addReview = function(product){
             this.review.createdOn = Date.now();
-			product.reviews.push(this.review);
-			this.review = {};
-		};
-	});
+    		product.reviews.push(this.review);
+    		this.review = {};
+    	};
+    });
+
+    app.directive('woodDescription', function(){
+        return {
+            restrict: 'E',
+            templateUrl: 'wood-description.html'
+        };
+    });
+
+    app.directive('productSpecs', function(){
+        return {
+            restrict: 'A',
+            templateUrl: 'product-specs.html'
+        }
+    })
 
   var wands = [
     { 

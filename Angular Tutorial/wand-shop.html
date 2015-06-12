@@ -23,41 +23,31 @@
       	<button>Add to Cart</button>
       </div>
       <div class="clear-fix"></div>
-	  <section class="tab" ng-controller="TabController as tab">
+      <section class="tab" ng-controller="TabController as tab">
         <ul class="nav nav-pills">
-			<li ng-class="{ active: tab.isSet(1)}">
-				<a ng-click="tab.setTab(1)" href>Wand Wood</a>
-			</li>
-			<li ng-class="{ active: tab.isSet(2)}">
-				<a ng-click="tab.setTab(2)" href>Core</a>
-			</li>
-			<li ng-class="{ active: tab.isSet(3)}">
-				<a ng-click="tab.setTab(3)" href>Length &amp; Flexability</a>
-			</li>
-			<li ng-class="{ active: tab.isSet(4)}">
-				<a ng-click="tab.setTab(4)" href>Reviews</a>
-			</li>
+          <li ng-class="{ active: tab.isSet(1)}">
+            <a ng-click="tab.setTab(1)" href>Wand Wood</a>
+          </li>
+          <li ng-class="{ active: tab.isSet(2)}">
+            <a ng-click="tab.setTab(2)" href>Core</a>
+          </li>
+          <li ng-class="{ active: tab.isSet(3)}">
+            <a ng-click="tab.setTab(3)" href>Length &amp; Flexability</a>
+          </li>
+          <li ng-class="{ active: tab.isSet(4)}">
+            <a ng-click="tab.setTab(4)" href>Reviews</a>
+          </li>
         </ul>
-        <div ng-show="tab.isSet(1)">
-          <h4>Wand Wood</h4>
-          <blockquote>
-          	<p><strong>{{product.wood}}</strong></p>
-          	<p>{{product.woodInfo}}</p>
-          </blockquote>
+        <div ng-show="tab.isSet(1)" ng-include="'wood-description.html'">
         </div>
         <div ng-show="tab.isSet(2)">
           <h4>Core</h4>
           <blockquote>
-          	<p><strong>{{product.core}}</strong></p>
-          	<p>{{product.coreInfo}}</p>
+            <p><strong>{{product.core}}</strong></p>
+            <p>{{product.coreInfo}}</p>
           </blockquote>
         </div>
         <div ng-show="tab.isSet(3)">
-          <h4>Length &amp; Flexability</h4>
-          <blockquote>
-          	<p><strong>{{product.length}} inches </strong></p>
-          	<p><strong>{{product.flexability}}</strong></p>
-          </blockquote>
         </div>
         <div ng-show="tab.isSet(4)">
             <!--  Product Reviews List -->
@@ -99,7 +89,6 @@
             </form>
           </div>
       </section>
-      
     </div>
 	</div>
   </body>

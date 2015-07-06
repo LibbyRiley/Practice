@@ -1,0 +1,171 @@
+/* General Styles */
+
+body {
+	font-family: Arial, Tahoma, sans-serif;
+	font-size: 14px;
+	color: #444549;
+}
+
+/* Floats */
+
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.cl {
+	clear: left;
+}
+.cr {
+	clear: right;
+}
+.cb {
+	clear: both;
+}
+
+/* Typography */
+
+h1{
+	font-size: 24px;
+} 
+
+h3 {
+	font-size: 14px;
+	text-transform: uppercase;
+} 
+
+h6 {
+	font-size: 11px;
+}
+
+a {
+	color: #dd0c46;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+/* Seperator */
+
+.sepContainer {
+	height: 14px;
+	background-image: url('../images/sepImage.png');
+	background-repeat: 0 0 repeat-y;
+}
+
+/* Stucture Styles */
+
+.centreContainer {
+	width: 960px; 
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/* Top Styles */
+#topContainer {
+	background-image: url('../images/topBg.png');
+	background-repeat: 0 0 repeat;
+	height: 130px;
+}
+#topContainer .logo {
+	margin-top: 40px;
+}
+#topContactInfo {
+	background-image: url('../images/contactinfo.png');
+	background-repeat:0 0 no-repeat;
+	width: 291px;
+	height: 118px;
+}
+
+#topContactInfo ul {
+	padding: 0 30px;
+}
+
+#topContactInfo ul li {
+	border-bottom: 1px solid #ebebed;
+}
+
+#topContactInfo ul li p {
+	color: #929790;
+	font-size: 11px;
+	background-image: url('../images/listArrowDark.png');
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 15px;
+	margin: 12px 0;
+	margin-right: 8px;
+}
+#topContactInfo #socialIcons{
+	padding-top: 9px; 
+}
+
+#topContactInfo #socialIcons li{
+	display: inline;
+	border: none;
+	padding-right:3px;
+}
+
+#topContactInfo ul li:last-child {
+	border: none;
+}
+
+/* Menu Style */
+
+#menuContainer {
+	background-image: url('../images/menuBG.png');
+	background-repeat: 0 0 repeat;
+	height: 80px;
+}
+
+#nav li {
+	display: inline;
+	float: left;
+	border-right: 1px solid #606168;
+	margin: 24px 30px 0 0; 
+	padding-right: 30px;
+	transition: 0.2s ease;
+}
+#nav li:hover {
+	margin-top: 20px;
+}
+#nav li a:hover {
+	text-decoration: none;
+}
+#nav li a:hover span {
+ color:gray;
+}
+
+#nav li:last-child {
+	border: none;
+}
+#nav li a {
+	color: white;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+#nav li a span {
+	padding-top: 5px;
+	font-size: 12px;
+	text-transform: lowercase;
+	display: block;
+	color: #606168;
+	transition: 0.2s ease-in;
+}
+
+#sliderContainer {
+	background-image: url('../images/sliderBG.pg');
+	background-repeat: 0 0 repeat-y;
+}
+
+
+
+
+
+
+
+
+
+

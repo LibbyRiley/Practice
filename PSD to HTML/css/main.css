@@ -1,7 +1,7 @@
 /* General Styles */
-
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400);
 body {
-	font-family: Arial, Tahoma, sans-serif;
+	font-family: 'Titillium-Web', Tahoma, sans-serif;
 	font-size: 14px;
 	color: #444549;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -32,12 +32,15 @@ p {
 /* Typography */
 
 h1{
+	font-family: 'Titillium-Web', Tahoma, sans-serif;
 	font-size: 24px;
 } 
 
 h3 {
+	font-family: 'Titillium-Web', Tahoma, sans-serif;
 	font-size: 14px;
 	text-transform: uppercase;
+	letter-spacing: .5px;
 } 
 
 .sectionHeading {
@@ -60,6 +63,7 @@ h3 {
 
 
 h6 {
+	font-family: 'Titillium-Web', Tahoma, sans-serif;
 	font-size: 11px;
 }
 
@@ -71,6 +75,7 @@ a:hover{
 	text-decoration: underline;
 }
 .readMoreLink {
+	font-family: 'Titillium-Web', Tahoma, sans-serif;
 	font-size: 11px;
 	background-image: url('../images/listArrowRed.png');
 	background-repeat: no-repeat;
@@ -155,8 +160,8 @@ a:hover{
 	display: inline;
 	float: left;
 	border-right: 1px solid #606168;
-	margin: 24px 30px 0 0; 
-	padding-right: 30px;
+	margin: 24px 35px 0 0; 
+	padding-right: 35px;
 	transition: 0.2s ease;
 }
 #nav li:hover {
@@ -173,6 +178,7 @@ a:hover{
 	border: none;
 }
 #nav li a {
+	font-family: 'Titillium-Web', Tahoma, sans-serif;
 	color: white;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -209,6 +215,7 @@ a:hover{
 #servicesContainer .oneThirdCol h3 {
 	color: #2d2f33;
 	margin-top: 15px;
+	letter-spacing: .5px;
 }
 #servicesContainer  .oneThirdCol img {
 	margin: 0 12px 15px 0;
@@ -308,6 +315,7 @@ a:hover{
 #footerContainer {
 	background-image: url('../images/footerBG.png');
 	background-repeat: repeat;
+	margin-top: 20px;
 
 }
 #footerContainer .oneThirdCol {

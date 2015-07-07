@@ -54,10 +54,10 @@
         </div>
         <!-- End sliderContainer -->
 
-        <div id="servicesConatiner">
+        <div id="servicesContainer">
             <div class="centreContainer">
-                <div class="oneThirdCol">
-                    <img src="images/serviceIcon1.png" alt="Service One"/>
+                <div class="oneThirdCol" id="col1">
+                    <img src="images/serviceIcon1.png" alt="Service One" class="fl"/>
                     <h3>Tailored to your needs</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ex maxime fugiat odio voluptates fuga sed error labore, illo doloremque.</p>
                     <ul class="arrowList">
@@ -67,8 +67,8 @@
                     </ul>
                 </div>
                 <!-- End oneThirdCol 1 -->
-                <div class="oneThirdCol">
-                    <img src="images/serviceIcon2.png" alt="Service Two"/>
+                <div class="oneThirdCol" id="col2">
+                    <img src="images/serviceIcon2.png" alt="Service Two" class="fl"/>
                     <h3>Awesome document Handling</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ex maxime fugiat odio voluptates fuga sed error labore, illo doloremque.</p>
                     <ul class="arrowList">
@@ -78,8 +78,8 @@
                     </ul>
                 </div>
                 <!-- End oneThirdCol 2 -->
-                <div class="oneThirdCol">
-                    <img src="images/serviceIcon3.png" alt="Service Three"/>
+                <div class="oneThirdCol" id="col3">
+                    <img src="images/serviceIcon3.png" alt="Service Three" class="fl"/>
                     <h3>We are always open</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ex maxime fugiat odio voluptates fuga sed error labore, illo doloremque.</p>
                     <ul class="arrowList">
@@ -93,38 +93,39 @@
             <!-- End centreContainer -->
         </div>
         <!-- End servicesContainer -->
-
-        <div class="sepContainer">
+        <div class="centreContainer">
+            <div class="sepContainer">
             
+            </div>
         </div>
 
         <div class="centreContainer">
-            <div id="leftContainer">
-                <h3>Latest <span>News</span></h3>
+            <div id="leftContainer" class="fl">
+                <h3 class="sectionHeading" >Latest <span>News</span></h3>
                 <ul id="newslist">
                     <li>
                         <h6>October 26th 2015</h6>
-                        <h3>Tutorial</h3>
+                        <h3><a href="#">Tutorial</a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas perspiciatis ipsa, ducimus enim beatae aliquam distinctio perferendis dolor eos similique.</p>
                         <a href="#" class="readMoreLink">Read more</a>
                     </li>
                     <li>
                         <h6>September 27th 2015</h6>
-                        <h3>Tutorial</h3>
+                        <h3><a href="#">Tutorial</a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas perspiciatis ipsa, ducimus enim beatae aliquam distinctio perferendis dolor eos similique.</p>
                         <a href="#" class="readMoreLink">Read more</a>
                     </li>
                     <li>
                         <h6>August 29th 2015</h6>
-                        <h3>Tutorial</h3>
+                        <h3><a href="#">Tutorial</a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas perspiciatis ipsa, ducimus enim beatae aliquam distinctio perferendis dolor eos similique.</p>
                         <a href="#" class="readMoreLink">Read more</a>
                     </li>
                 </ul>
             </div>
             <!-- End leftContainer -->
-            <div id="rightContainer">
-                <h3>About <span>The Company</span></h3>
+            <div id="rightContainer" class="fr">
+                <h3 class="sectionHeading">About <span>The Company</span></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum reiciendis veritatis eos consequuntur dolorum modi voluptatibus at deserunt eius.</p>
                 <blockquote>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ipsa unde laboriosam, quae, cumque neque.</p>
@@ -133,32 +134,34 @@
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad reprehenderit in debitis quidem sint unde blanditiis cupiditate laboriosam atque ut.</p>
                 <p><strong>Here are some of our satisfied customers:</strong></p>
-                <ul id="clientList">
-                    <li>
-                        <p><a href="#"><img src="images/clients/clientLogo1" alt="Clients"></a></p>
-                    </li>
-                    <li>
-                        <p><a href="#"><img src="images/clients/clientLogo2" alt="Clients"></a></p>
-                    </li>
-                    <li>
-                        <p><a href="#"><img src="images/clients/clientLogo3" alt="Clients"></a></p>
-                    </li>
-                    <li>
-                        <p><a href="#"><img src="images/clients/clientLogo1" alt="Clients"></a></p>
-                    </li>
-                    <li>
-                        <p><a href="#"><img src="images/clients/clientLogo3" alt="Clients"></a></p>
-                    </li>
-                    <li>
-                        <p><a href="#"><img src="images/clients/clientLogo1" alt="Clients"></a></p>
-                    </li>
-                    <li>
-                        <p><a href="#"><img src="images/clients/clientLogo3" alt="Clients"></a></p>
-                    </li>
-                    <li>
-                        <p><a href="#"><img src="images/clients/clientLogo2" alt="Clients"></a></p>
-                    </li>
-                </ul>
+                <div id="clientListContainer">
+                    <ul id="clientList">
+                        <li>
+                            <p><a href="#"><img src="images/clientLogo1.png" alt="Clients"></a></p>
+                        </li>
+                        <li>
+                            <p><a href="#"><img src="images/clientLogo2.png" alt="Clients"></a></p>
+                        </li>
+                        <li>
+                            <p><a href="#"><img src="images/clientLogo3.png" alt="Clients"></a></p>
+                        </li>
+                        <li>
+                            <p><a href="#"><img src="images/clientLogo1.png" alt="Clients"></a></p>
+                        </li>
+                        <li>
+                            <p><a href="#"><img src="images/clientLogo3.png" alt="Clients"></a></p>
+                        </li>
+                        <li>
+                            <p><a href="#"><img src="images/clientLogo1.png" alt="Clients"></a></p>
+                        </li>
+                        <li>
+                            <p><a href="#"><img src="images/clientLogo3.png" alt="Clients"></a></p>
+                        </li>
+                        <li>
+                            <p><a href="#"><img src="images/clientLogo2.png" alt="Clients"></a></p>
+                        </li>
+                    </ul>
+                </div>
 
             </div>
             <!-- End rightContainer -->

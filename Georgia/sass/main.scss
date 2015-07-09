@@ -1,0 +1,267 @@
+@import 'reset';
+
+/* General Styles */
+
+
+/* Color Variables */
+$bg: #fcfcfc;
+$base: #2c3e50;
+$primary: #e74c3c; 
+$primary-light: #FF7053;
+$secondary: #3390F4;
+
+
+
+body {
+	background-color: $bg;
+	color: $base;
+	font-family: Georgia, serif;
+}
+
+.centreContainer {
+	margin: 0 20px;
+
+	max-width: 960px;
+	min-width: 340px;
+	overflow: hidden;
+	@media (min-width:1024px) {
+		margin: 0 auto;
+	}
+}
+
+// Columns 
+
+.row {
+	display: block;
+	width: 100%;
+	max-width: 960px;
+}
+
+footer .col1of3 {
+	display: block;
+	width: 100%;
+	@media (min-width: 570px) {
+		display: inline-block;
+		width: 290px / 960px * 100%;
+		margin-right: 20px / 960px * 100%;
+		&:last-child {
+			text-align: right;
+			margin-right: 0;
+		}
+	}
+
+}
+
+article[role="main"] {
+    @media (min-width:840px) {
+		float: left;
+		width: 550px / 960px * 100%;
+		margin-right: 50px / 960px * 100%;
+	}
+}
+
+aside[role="complimentary"] {
+  	margin-top: 30px;
+  	@media (min-width: 840px) {
+  	  	float: right;
+  		width: 350px / 960px * 100%;
+  	}
+  	#specsList {
+  		background-color: #dedede;
+  		padding: 25px / 960px * 100%;
+  		height: 300px;
+  		@media (min-width:440px){
+  			float: right;
+  			width: 250px / 440px * 100%;
+  		}
+  		@media (min-width: 840px){
+  			float: none;
+  			width: initial;
+  			height: none;
+  		}
+
+  	}
+  	li {
+  		border-bottom: 1px solid silver;
+  		margin: 0 20px;
+  		h5 {
+  			font-size: 12px;
+  			padding: 15px 0;
+  			margin: 0;
+  		}
+  	}
+  	li:last-child {
+  		border-bottom: none;
+  	}
+  	span {
+  		font-weight: normal;
+  		float: right;
+  	}
+  	#imgContainer {
+  		width: 100%;
+  		background-color: $base;
+  		text-align: center;
+  		img {
+  			max-width: 275px;
+  			margin: 0 auto;
+  			padding: 20px 0;
+  		}
+  		
+  		@media (min-width:440px) {
+  			float: left;
+  			width: 150px / 440px * 100%;
+  			margin-right: 0;
+  			img {
+  				width: 100%;
+  				max-width: 275px;
+  			}
+  		}
+  		
+  		@media (min-width: 840px){
+  			float: none;
+  			width: initial;
+  			padding: 25px / 960px * 100%;
+  			img {
+  				width: 90%;
+  				padding: 20px / 960px * 100%;
+  			}
+  		}
+  	}
+
+}
+
+header {
+	text-align: center;
+	background-color: $base;
+	padding-top: 30px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	@media (min-width: 675px) {
+		text-align: left;
+		padding-bottom: 25px;
+		#logo {
+			float:left;
+			h1 {
+				font-size: 48px;
+			}
+		}
+	}
+	#nav {
+		margin-top: 30px;
+		padding-bottom: 20px;
+		@media (min-width:675px) {
+			float: right;
+			margin-top: 45px;
+		}
+
+
+		li {
+			display: inline;
+			a {
+				background-color: $bg;
+				border-radius: 3px;
+				padding: 12px 25px;				
+				font-size: 12px;
+				font-style: italic;
+				color: $base;
+				transition: .5s;
+				@media (min-width: 675px) {
+					padding: 10px 15px;
+				}
+			}
+			a.active {
+				color: $bg;
+				background-color: $secondary;
+			}
+			&:hover {
+				a {
+					color: $bg;
+					background-color: $secondary;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	padding: 30px 0;
+	background-color: black;
+	margin-top: 40px;
+	overflow: hidden;
+	color: gray;
+	a:hover {
+		text-decoration: underline;
+	} 
+	#follow img {
+		margin-left: 8px;
+	}
+
+}
+
+
+/* Typography */
+
+h1 {
+	font-size: 30px;
+	color: $bg;
+	margin-bottom: 6px;
+	text-transform: uppercase;
+
+}
+h2 {
+	font-size: 20px;
+	color: $secondary;
+	font-style: italic;
+	margin-bottom: 10px;
+	@media (min-width 675px) {
+		font-size: 28px;
+	}
+}
+h3 {
+	font-size: 22px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 14px;
+	margin-top: 26px;
+	color: $primary;
+}
+h4 {
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+h5 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 16px;
+}
+h6 {
+	font-size: 16px;
+	font-variable: italic;
+	margin-bottom: 14px;
+}
+p {
+	line-height: 1.5em;
+	font-size: 16px;
+	margin-bottom: 12px;
+}
+
+article p {
+	text-align: justify;
+}
+blockquote {
+	background-image: url('../images/quotemark.png');
+	background-position: top left;
+	background-repeat: no-repeat;
+	font-size: 18px;
+	opacity: 0.6;
+	line-height: 1.7em;
+	padding-left: 40px;
+	font-style: italic;
+	margin: 20px 0;
+}
+
+
+a {
+	color: $secondary;
+	text-decoration: none;
+}

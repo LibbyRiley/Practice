@@ -35,8 +35,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* General Styles */
 /* Color Variables */
+/* General Styles */
 body {
   background-color: #fcfcfc;
   color: #2c3e50;
@@ -61,12 +61,15 @@ footer .col1of3 {
   width: 100%; }
   @media (min-width: 570px) {
     footer .col1of3 {
+      text-align: center;
       display: inline-block;
-      width: 30.20833%;
+      width: 31.45833%;
       margin-right: 2.08333%; }
       footer .col1of3:last-child {
         text-align: right;
-        margin-right: 0; } }
+        margin-right: 0; }
+      footer .col1of3:first-child {
+        text-align: left; } }
 
 @media (min-width: 840px) {
   article[role="main"] {
@@ -242,3 +245,24 @@ blockquote {
 a {
   color: #3390f4;
   text-decoration: none; }
+
+button {
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer; }
+
+button.light {
+  background-color: #fcfcfc;
+  color: #2c3e50; }
+  button.light:hover {
+    color: #e74c3c; }
+
+button.dark {
+  background-color: black;
+  color: #fcfcfc; }
+  button.dark:hover {
+    color: #e74c3c; }

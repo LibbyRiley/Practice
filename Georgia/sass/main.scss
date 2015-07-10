@@ -1,7 +1,5 @@
 @import 'reset';
 
-/* General Styles */
-
 
 /* Color Variables */
 $bg: #fcfcfc;
@@ -10,7 +8,7 @@ $primary: #e74c3c;
 $primary-light: #FF7053;
 $secondary: #3390F4;
 
-
+/* General Styles */
 
 body {
 	background-color: $bg;
@@ -29,7 +27,7 @@ body {
 	}
 }
 
-// Columns 
+// Column Styles
 
 .row {
 	display: block;
@@ -41,16 +39,22 @@ footer .col1of3 {
 	display: block;
 	width: 100%;
 	@media (min-width: 570px) {
+		text-align: center;
 		display: inline-block;
-		width: 290px / 960px * 100%;
+		width: 302px / 960px * 100%;
 		margin-right: 20px / 960px * 100%;
 		&:last-child {
 			text-align: right;
 			margin-right: 0;
 		}
+		&:first-child {
+			text-align: left;
+		}
 	}
 
 }
+
+//  Layout Styles
 
 article[role="main"] {
     @media (min-width:840px) {
@@ -127,7 +131,6 @@ aside[role="complimentary"] {
   			}
   		}
   	}
-
 }
 
 header {
@@ -265,3 +268,31 @@ a {
 	color: $secondary;
 	text-decoration: none;
 }
+
+button {
+	padding: 10px 15px;
+	border-radius: 3px;
+	border: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 12px;
+	cursor: pointer;
+}
+button.light {
+	background-color: $bg;
+	color: $base;
+	&:hover {
+		color: $primary;
+	}
+}
+button.dark {
+	background-color: black;
+	color: $bg;
+	&:hover {
+		color: $primary;
+	}
+}
+
+
+
+

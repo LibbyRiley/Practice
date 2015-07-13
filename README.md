@@ -1,7 +1,7 @@
 # Practice
 <h2>This repo is where I'll keep my practice sites and tutorial outcomes.</h2>
 
-<h2>Current project: Creating a focus depth example using images from MadMen.</h2>
+<h3>Current project: Creating a focus depth example using images from MadMen.</h3>
 <p><strong>Other projects:</strong>
 <ul>
   <li>Slicing and building a couple PSD designs.</li>

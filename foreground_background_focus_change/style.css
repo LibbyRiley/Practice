@@ -1,0 +1,49 @@
+body {
+	background-color: #222;
+}
+
+#centreContainer {
+	width: 600px;
+	margin: 0 auto;
+	padding: 30px;
+	margin-top: 40px;
+	background-color: #eee;
+	border-radius: 4px;
+	box-shadow: 0 0 15px 0px #000;
+	height: 550px
+}
+h1 {
+	font-size: 2.5em;
+}
+p {
+	font-size: 0.8em;
+}
+
+#info {
+	font-family: Verdana, Arial, sans-serif;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+#images {
+	width: 550px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.foreground, .background {
+	width: 550px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 1s;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.blur {
+	-webkit-filter: blur(3px); 
+	filter: blur(3px); 
+}
